@@ -1,11 +1,17 @@
 .container {
   border: 1px solid #888787;
   border-radius: 4px;
+  max-width: 600px;
+  margin-top: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .App footer {
   text-align: center;
   margin-top: 10px;
+  font-size: 12px;
 }
 h1 {
   text-align: center;
+  margin: 20px;
 }

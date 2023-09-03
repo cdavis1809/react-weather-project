@@ -1,4 +1,19 @@
-ul {
+.weather ul {
   list-style: none;
   padding: 0;
+}
+.weather .temperature {
+  font-size: 50px;
+  line-height: 64px;
+  margin-right: 3px;
+}
+.weather img {
+  float: left;
+  margin-right: 10px;
+}
+.weather .unit {
+  font-size: 15px;
+  font-weight: 400px;
+  position: relative;
+  top: -24px;
 }
