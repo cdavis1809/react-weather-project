@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate.js";
+import WeatherTemp from "./WeatherTemp.js";
 
 export default function WeatherCall(props) {
   return (
@@ -18,12 +19,10 @@ export default function WeatherCall(props) {
             alt="Mostly-cloudy"
             className="float-left"
           />
-          <span className="temperature">{props.data.temperature}</span>
-          <span className="unit">°C</span>
+          <WeatherTemp celsius={props.data.temperature} />
         </div>
         <div className="col-6">
           <ul className="weatherDescription">
-            <li>Real Feel: {props.data.realFeel} °C</li>
             <li>Humidity: {props.data.humidity} %</li>
             <li>Wind Speed: {props.data.wind} km/h</li>
           </ul>
