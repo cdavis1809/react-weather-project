@@ -24,7 +24,7 @@ export default function WeatherCall(props) {
             />
           </span>
           <WeatherTemp
-            celsius={props.data.temperature}
+            fahrenheit={props.data.temperature}
             city={props.data.city}
           />
         </div>
