@@ -1,13 +1,18 @@
-.weather .weatherDescription {
+.weather .WeatherDescription {
   list-style: none;
   padding: 0;
   margin-top: 20px;
+  margin-left: 100px;
   line-height: 28px;
+}
+.weather .city {
+  margin-left: 20px;
 }
 .weather .cityDescription {
   list-style: none;
   padding: 0;
   margin-top: 0;
+  margin-left: 20px;
   line-height: 28px;
 }
 .weather .temperature {
@@ -15,7 +20,7 @@
   line-height: 95px;
   margin-right: 3px;
 }
-.weather img {
+.weather-icon {
   float: left;
   margin-right: 10px;
 }

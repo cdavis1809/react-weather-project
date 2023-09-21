@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherCall from "./WeatherCall.js";
+import WeatherForecast from "./WeatherForecast.js";
 import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.city,
@@ -22,7 +22,7 @@ export default function Weather(props) {
   }
   function search() {
     const apiKey = "406035333ab93t5b036b8515eob03bf5";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
   function handleSubmit(event) {
@@ -56,6 +56,8 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherCall data={weatherData} />
+        <br />
+        <WeatherForecast data={weatherData} />
       </div>
     );
   } else {

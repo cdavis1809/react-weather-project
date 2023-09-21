@@ -5,7 +5,9 @@ import WeatherTemp from "./WeatherTemp.js";
 export default function WeatherCall(props) {
   return (
     <div>
-      <h2>{props.data.city}</h2>
+      <div className="city">
+        <h2>{props.data.city}</h2>
+      </div>
       <ul className="cityDescription">
         <li>
           <FormattedDate date={props.data.date} />
@@ -14,15 +16,20 @@ export default function WeatherCall(props) {
       </ul>
       <div className="row">
         <div className="col-6">
-          <img
-            src={props.data.iconUrl}
-            alt="Mostly-cloudy"
-            className="float-left"
+          <span className="weather-icon">
+            <img
+              src={props.data.iconUrl}
+              alt="Mostly-cloudy"
+              className="float-left"
+            />
+          </span>
+          <WeatherTemp
+            celsius={props.data.temperature}
+            city={props.data.city}
           />
-          <WeatherTemp celsius={props.data.temperature} />
         </div>
         <div className="col-6">
-          <ul className="weatherDescription">
+          <ul className="WeatherDescription">
             <li>Humidity: {props.data.humidity} %</li>
             <li>Wind Speed: {props.data.wind} km/h</li>
           </ul>
